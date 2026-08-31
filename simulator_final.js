@@ -370,7 +370,7 @@ const OAR = {
 // which changed total resistance, so the effort scale had to be re-fitted against it.
 
 const EFFORT = {
-    F_peak_ref: 352.0,      // N [DERIVED — calibration protocol above, rerun 31 Aug 2026 via --calibrate after the sculling catch-angle correction (−55°→−63°): sync 2x, 80 kg rowers, 30 SPM → 4.3000 m/s. Prior: 680 (estimate), 553.1 (pre-drag-rebuild), 341.8, 341.5 (sweep catch angle).]
+    F_peak_ref: 348.5,      // N [DERIVED — calibration protocol above, rerun 31 Aug 2026 via --calibrate after the seat_hw mass correction (2.5→0.5 kg each, total 192→188 kg): sync 2x, 80 kg rowers, 30 SPM → 4.3000 m/s. Prior: 352.0 (sculling catch angle −63°), 680 (estimate), 553.1 (pre-drag-rebuild), 341.8, 341.5 (sweep catch angle).]
     v_cal_target: 4.30,     // m/s [ASSUMED — club-level 2x pace anchor at 30 SPM; the single effort anchor, documented]
     cal_SPM: 30             // [ASSUMED — calibration stroke rate]
 };
@@ -433,7 +433,7 @@ const CLOSURE = {
 
 const MASS = {
     shell: 27,             // kg [CITED: World Rowing Rules of Racing, Rule 32 Bye-Law — 2x minimum 27 kg; see REFERENCES]
-    seat_hw: 2.5,          // kg seat hardware, travels with the seat [ASSUMED — typical seat+wheels; swept via the sensitivity sweep mass terms]
+    seat_hw: 0.5,          // kg seat hardware, travels with the seat [CITED: Angus Rowboats, product page "Carbon Fiber Rowing Seat for Sliding Seat System" — complete carbon seat with undercarriage and stainless bearings, "weighing less than 1.1 pounds" / "1 lb 1 oz" = 0.48 kg ≈ 0.5 (https://angusrowboats.com/products/carbon-fiber-rowing-seat); swept via the sensitivity sweep mass terms]
     rower_1: 80,           // kg [default; --weight]
     rower_2: 80,           // kg [default; --weight2 for unequal rowers]
     frac_pelvis: 0.1117,   // [CITED: de Leva Table 4, LPT]
